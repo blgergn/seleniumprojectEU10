@@ -37,6 +37,8 @@ public class T5_getText_getAttribute {
             System.out.println("SOMETHING IS WRONG!");
         }
 
+        driver.close();
+
 
 
 
