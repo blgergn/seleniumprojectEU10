@@ -28,6 +28,16 @@ public class T5_getText_getAttribute {
 
         WebElement firstnameInput=driver.findElement(By.name("firstname"));
 
+        String expectedPlaceHolder="first name";
+        String actualPlaceHolder=firstnameInput.getAttribute("placeholder");
+
+        if (actualPlaceHolder.equals(expectedPlaceHolder)){
+            System.out.println("PASSED AGAIN!");
+        }else{
+            System.out.println("SOMETHING IS WRONG!");
+        }
+
+
 
 
             }
