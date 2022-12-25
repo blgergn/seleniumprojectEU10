@@ -33,9 +33,9 @@ public class T2_LinkText_Practice {
         driver.navigate().back();
 
         String expectedTitle2 = "Practice";
-        String actualTitle2=driver.getTitle();
+        actualTitle=driver.getTitle();
 
-        if (expectedTitle2.equals(actualTitle2)){
+        if (expectedTitle2.equals(actualTitle)){
             System.out.println("Everything is OKEY!");
         }else{
             System.out.println("I am SORRY!");
