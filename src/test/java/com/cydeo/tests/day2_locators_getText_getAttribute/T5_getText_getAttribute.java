@@ -26,5 +26,9 @@ public class T5_getText_getAttribute {
             System.out.println("FAILED!");
         }
 
+        WebElement firstnameInput=driver.findElement(By.name("firstname"));
+
+
+
             }
 }
