@@ -30,7 +30,18 @@ public class T2_getText_getAttribute {
         if (actualForgotPasswordButton.equalsIgnoreCase(expectedForgotPasswordButton)){
             System.out.println("Congrats, second task is PASSED!");
         }else{
+            System.out.println("actualForgotPasswordButton = " + actualForgotPasswordButton);
+            System.out.println("expectedForgotPasswordButton = " + expectedForgotPasswordButton);
             System.out.println("Sorry, second task is FAILED!");
+        }
+
+        String expectedInHref="forgot_password=yes";
+        String actualHrefAttributeValue=forgotPasswordButton.getAttribute("href");
+
+        if (actualHrefAttributeValue.contains(expectedInHref)){
+            System.out.println("Last task is PASSED!");
+        }else{
+            System.out.println("Sorry, last task is FAILED!");
         }
 
     }
