@@ -20,8 +20,8 @@ public class T4_findElements {
         driver.get("https://practice.cydeo.com/abtest");
 
         List<WebElement> allLinks = driver.findElements(By.tagName("a"));
-
         System.out.println("allLinks.size() = " + allLinks.size());
+
 
         //print out the text of the links. (iter)
 
