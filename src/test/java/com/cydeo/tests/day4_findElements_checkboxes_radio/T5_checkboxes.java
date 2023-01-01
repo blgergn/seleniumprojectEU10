@@ -27,7 +27,7 @@ public class T5_checkboxes {
         Thread.sleep(2000);
         checkbox2.click();
 
-        System.out.println("checkbox1.isSelected() = " + checkbox1.isSelected());
+        System.out.println("checkbox1.isSelected(), expecting true= " + checkbox1.isSelected());
         System.out.println("checkbox2.isSelected() = " + checkbox2.isSelected());
 
 
