@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public class T5_checkboxes {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         WebDriver driver= WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
@@ -22,8 +22,9 @@ public class T5_checkboxes {
 
         System.out.println("checkbox1.isSelected() = " + checkbox1.isSelected());
         System.out.println("checkbox2.isSelected() = " + checkbox2.isSelected());
-
+        Thread.sleep(2000);
         checkbox1.click();
+        Thread.sleep(2000);
         checkbox2.click();
 
         System.out.println("checkbox1.isSelected() = " + checkbox1.isSelected());
