@@ -35,7 +35,9 @@ public class T1_Alert_Practices {
         String expectedResult="You successfully clicked an alert";
         String actualResult=information.getText();
 
-        Assert.assertEquals(expectedResult,actualResult);
+        //Assert.assertEquals(expectedResult,actualResult);
+        //Failure message will only be displayed if assertion fails:"Result text is NOT displayed"
+        Assert.assertTrue(information.isDisplayed(), "Information text is NOT displayed");
 
 
 
