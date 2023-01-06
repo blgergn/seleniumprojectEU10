@@ -60,9 +60,17 @@ public class DropdownPractices {
     yearDropdown.selectByVisibleText("1924");
     dayDropdown.selectByIndex(0);
 
+    String expectedYear="1924";
+    String expectedMonth="December";
+    String expectedDay="1";
 
+    String actualYear=yearDropdown.getFirstSelectedOption().getText();
+    String actualMonth=monthDropdown.getFirstSelectedOption().getText();
+    String actualDay=dayDropdown.getFirstSelectedOption().getText();
 
-
+    Assert.assertTrue(actualYear.equals(expectedYear));
+    Assert.assertEquals(actualDay,expectedDay);
+    Assert.assertEquals(actualMonth,expectedMonth);
 
     }
 
