@@ -39,8 +39,15 @@ public class T5_WindowsPractice {
         WebElement clickhereButton=driver.findElement(By.linkText("Click Here"));
         clickhereButton.click();
 
+        for (String each:driver.getWindowHandles()){
+            driver.switchTo().window(each);
+            System.out.println("Current title while switching windows: "+ driver.getTitle());
+        }
+
+        String expectedTitleAfterClick="New Window";
         actualTitle=driver.getTitle();
 
-        System.out.println("Title after click " + actualTitle);
+        Assert.assertEquals(actualTitle,expectedTitleAfterClick);
+        System.out.println("Title after click: " + actualTitle);
     }
 }
