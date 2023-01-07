@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -49,5 +50,10 @@ public class T5_WindowsPractice {
 
         Assert.assertEquals(actualTitle,expectedTitleAfterClick);
         System.out.println("Title after click: " + actualTitle);
+    }
+
+    @AfterMethod
+    public void TearDown(){
+        driver.quit();
     }
 }
