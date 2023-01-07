@@ -24,12 +24,23 @@ public class T5_WindowsPractice {
 
     @Test
     public void multiple_window_test(){
-        WebElement title=driver.findElement(By.xpath("//title"));
+
+        //Storing the main page's window handle as string is good practice for future re-usable purposes
+        String mainHandle=driver.getWindowHandle();
+
+        System.out.println("mainHandle = " + mainHandle);
+
         String expectedTitle="Windows";
-        String actualTitle=title.getText();
+        String actualTitle=driver.getTitle();
         Assert.assertEquals(actualTitle,expectedTitle);
 
-        WebElement clickhereButton=driver.findElement(By.xpath("//a[@href='/windows/new']"));
+        System.out.println("Title before click:" +actualTitle);
+
+        WebElement clickhereButton=driver.findElement(By.linkText("Click Here"));
         clickhereButton.click();
+
+        actualTitle=driver.getTitle();
+
+        System.out.println("Title after click " + actualTitle);
     }
 }
