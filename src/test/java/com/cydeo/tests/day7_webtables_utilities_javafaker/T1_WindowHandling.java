@@ -43,17 +43,12 @@ public class T1_WindowHandling {
             if (driver.getCurrentUrl().contains("etsy")){
                 break;
             }
-
-            //Assert: Title contains "Etsy"
-            String actualTitle=driver.getTitle();
-            String expectedTitle="Etsy";
-
-            Assert.assertEquals(expectedTitle,actualTitle);
         }
 
+        //Assert: Title contains "Etsy"
+        String actualTitle=driver.getTitle();
+        String expectedInTitle="Etsy";
 
-
-
-
+        Assert.assertTrue(actualTitle.contains(expectedInTitle));
     }
 }
