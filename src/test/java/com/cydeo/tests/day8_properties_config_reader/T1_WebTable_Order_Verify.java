@@ -27,7 +27,7 @@ public class T1_WebTable_Order_Verify {
     @Test
     public void order_name_verify_test(){
 
-        WebElement bobMartinCell=driver.findElement(By.xpath("//table[@id=ctl00_MainContent_orderGrid']//tr//td[.='Bob Martin']"));
+        WebElement bobMartinCell=driver.findElement(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//tr//td[.='Bob Martin']"));
 
         //System.out.println("bobMartinCell.getText() = " + bobMartinCell.getText());
 
@@ -35,6 +35,13 @@ public class T1_WebTable_Order_Verify {
         String actualBobName= bobMartinCell.getText();
 
         Assert.assertEquals(actualBobName,expectedBobName);
+
+        WebElement orderDateBob=driver.findElement(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//tr//td[.='Bob Martin']/following-sibling::td[3]"));
+
+        String expectedOrderDate = "12/31/2021";
+        String actualOrderDate= orderDateBob.getText();
+
+        Assert.assertEquals(actualOrderDate,expectedOrderDate);
 
 
     }
