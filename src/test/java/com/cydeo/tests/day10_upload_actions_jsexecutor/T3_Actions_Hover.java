@@ -28,9 +28,11 @@ public class T3_Actions_Hover {
         actions.moveToElement(img1).perform();
         Assert.assertTrue(user1.isDisplayed());
 
+        BrowserUtils.sleep(2);
         actions.moveToElement(img2).perform();
         Assert.assertTrue(user2.isDisplayed());
 
+        BrowserUtils.sleep(2);
         actions.moveToElement(img3).perform();
         Assert.assertTrue(user3.isDisplayed());
 
