@@ -23,6 +23,24 @@ public class T1_Registration_Form {
         inputLastName.sendKeys(faker.name().lastName());
 
         WebElement inputUsername=Driver.getDriver().findElement(By.xpath("//input[@placeholder='username']"));
-        inputUsername.sendKeys(faker.name().username());
+        //inputUsername.sendKeys(faker.name().username().replaceAll(".",""));
+        String user=faker.bothify("helpdesk###");
+        inputUsername.sendKeys(user);
+
+        WebElement inputemailaddress=Driver.getDriver().findElement(By.xpath("//input[@placeholder='email@email.com']"));
+        inputemailaddress.sendKeys(user+"@email.com");
+
+        WebElement inputPassword=Driver.getDriver().findElement(By.xpath("//input[@name='password']"));
+        inputPassword.sendKeys(faker.bothify("###??#####"));
+
+        WebElement inputPhonenumber=Driver.getDriver().findElement(By.xpath("//input[@name='phone']"));
+        inputPhonenumber.sendKeys(faker.numerify("571-###-####"));
+
+        WebElement selectGenderButton=Driver.getDriver().findElement(By.xpath("//input[@name='phone']"));
+
+
+
+
+
     }
 }
