@@ -27,6 +27,8 @@ public class ActionsPractices {
 
         actions.sendKeys(Keys.PAGE_UP, Keys.PAGE_UP, Keys.PAGE_UP, Keys.PAGE_UP).perform();
 
+        Driver.getDriver().close();
+
     }
 
 }
