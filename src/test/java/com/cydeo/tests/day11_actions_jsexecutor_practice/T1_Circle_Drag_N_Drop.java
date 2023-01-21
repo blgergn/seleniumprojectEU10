@@ -21,7 +21,8 @@ public class T1_Circle_Drag_N_Drop {
         WebElement bigCircle=Driver.getDriver().findElement(By.id("droptarget"));
 
         Actions actions=new Actions(Driver.getDriver());
-        actions.dragAndDrop(smallCircle,bigCircle).perform();
+        //actions.dragAndDrop(smallCircle,bigCircle).perform();
+        actions.clickAndHold(smallCircle).pause(2000).moveToElement(bigCircle).pause(2000).release().perform();
 
         String expectedText="You did great!";
         String actualText=bigCircle.getText();
