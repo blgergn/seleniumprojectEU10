@@ -51,5 +51,7 @@ public class POMPractices {
         libraryLoginPage.signInButton.click();
 
         Assert.assertTrue(libraryLoginPage.wrongEmailOrPasswordErrorMessage.isDisplayed());
+
+        Driver.closeDriver();
     }
 }
