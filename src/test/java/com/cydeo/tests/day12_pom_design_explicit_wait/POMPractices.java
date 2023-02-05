@@ -3,18 +3,22 @@ package com.cydeo.tests.day12_pom_design_explicit_wait;
 import com.cydeo.pages.LibraryLoginPage;
 import com.cydeo.utilities.Driver;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class POMPractices {
 
     LibraryLoginPage libraryLoginPage;
 
-    @Test
-    public void required_field_error_message_test(){
-
+    @BeforeMethod
+    public void setupMethod() {
         Driver.getDriver().get("https://library1.cydeo.com/");
+        libraryLoginPage = new LibraryLoginPage();
 
-       libraryLoginPage = new LibraryLoginPage();
+    }
+
+    @Test
+    public void required_field_error_message_test() {
 
         libraryLoginPage.signInButton.click();
 
@@ -24,10 +28,7 @@ public class POMPractices {
     }
 
     @Test
-    public void invalid_email_format_error_message_test(){
-        Driver.getDriver().get("https://library1.cydeo.com/");
-
-       libraryLoginPage=new LibraryLoginPage();
+    public void invalid_email_format_error_message_test() {
 
         libraryLoginPage.inputUsername.sendKeys("lkfdngdlfgdflk");
 
@@ -39,10 +40,7 @@ public class POMPractices {
     }
 
     @Test
-    public void library_negative_login_test(){
-        Driver.getDriver().get("https://library1.cydeo.com/");
-
-        libraryLoginPage=new LibraryLoginPage();
+    public void library_negative_login_test() {
 
         libraryLoginPage.inputUsername.sendKeys("anyway@dfsdfjsl.com");
 
